@@ -1,0 +1,10 @@
+# Translations
+*.mo
+
+venv/
+app.db
+coffee_shop.log*
+
+#packages
+__pycache__
+

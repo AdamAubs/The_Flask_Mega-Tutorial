@@ -1,0 +1,84 @@
+{% extends 'bootstrap/base.html' %} {% block title %} {% if title %}{{ title }}
+- Larkin Coffee Shop{% else %} {{ _('Welcome to Larkin Coffee shop') }}{% endif
+%} {% endblock %} {% block navbar %}
+<nav class="navbar navbar-deault">
+  <div class="container">
+    <div class="navbar-header">
+      <button
+        type="button"
+        class="navbar-toggle collapsed"
+        data-toggle="collapse"
+        data-target="#bs-example-navbar-collapse-1"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{{ url_for('index')}}"
+        >Larkin Coffee Shop</a
+      >
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="{{ url_for('index') }}">{{_('Home')}}</a></li>
+        <li><a href="{{ url_for('explore') }}">{{ _('Explore') }}</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        {% if current_user.is_anonymous %}
+        <li><a href="{{ url_for('login') }}">{{ _('Login') }}</a></li>
+        {% else %}
+        <li>
+          <a href="{{ url_for('user', username=current_user.username) }}"
+            >{{ _('Profile') }}</a
+          >
+        </li>
+        <li><a href="{{ url_for('logout') }}">{{ _('Logout') }}</a></li>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+  <hr />
+</nav>
+{% endblock %}
+<!-- using with construct to assgin the result of calling get_flashed_messages to a messages variable.
+    return a list of all the messages that have been registered with flash() previously.
+-->
+{% block content %}
+<div class="container">
+  {% with messages = get_flashed_messages() %} {% if messages %} {% for message
+  in messages %} {{ message }}
+  <div class="alert alert-info" role="alert">{{ message }}</div>
+  {% endfor %} {% endif %} {% endwith %} {# application content needs to be
+  provided in the app_content block #} {% block app_content %}{% endblock %}{%
+  endblock %}
+</div>
+
+{% block scripts %} {{ super() }} {{ moment.include_moment() }}
+{{moment.lang(g.locale)}}
+
+<script>
+  //replaces the content of destElem with image tag displaying a loading indicator
+  function translate(sourceElem, destElem, sourceLang, destLang) {
+    $(destElem).html(
+      "<img src=\"{{ url_for('static', filename='loading.gif') }}\">"
+    );
+    //uses jQuery $.post method to send an AJAX POST request to the URL /translate data sent includes original text, source language, and destination language
+    $.post("/translate", {
+      text: $(sourceElem).text(),
+      source_language: sourceLang,
+      dest_language: destLang,
+    })
+      .done(function (response) {
+        //if the POST request is successful the .done callback is executed.
+        $(destElem).text(response["text"]); //the translated text received from the server response is set as the content of destElem
+      })
+      .fail(function () {
+        //if the POST request fails
+        $(destElem).text("{{ _('Error: Could not contact server.') }}"); //destElem is set to display an error message
+      });
+  }
+</script>
+
+{% endblock %}

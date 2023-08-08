@@ -1,0 +1,263 @@
+# Spanish translations for PROJECT.
+# Copyright (C) 2023 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2023-08-08 07:06-0500\n"
+"PO-Revision-Date: 2023-08-07 23:03-0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: app/__init__.py:21
+msgid "Please log in to access this page"
+msgstr "Por favor ingrese para acceder a esta página."
+
+#: app/email.py:29
+msgid "[LarkinCoffeeShop] Reset Your Password"
+msgstr "[LarkinCoffeeShop] Nueva Contraseña"
+
+#: app/forms.py:8
+msgid "username"
+msgstr "Nombre de usuario"
+
+#: app/forms.py:9
+msgid "password"
+msgstr "Contraseña"
+
+#: app/forms.py:10
+msgid "Remember Me"
+msgstr "Recordarme"
+
+#: app/forms.py:11 app/routes.py:76 app/templates/login.html:3
+msgid "Sign In"
+msgstr "Ingresar"
+
+#: app/forms.py:14 app/forms.py:39
+msgid "Username"
+msgstr "Nombre de usuario"
+
+#: app/forms.py:15 app/forms.py:63
+msgid "Email"
+msgstr "Email"
+
+#: app/forms.py:16 app/forms.py:67
+msgid "Password"
+msgstr "Contraseña"
+
+#: app/forms.py:18 app/forms.py:69
+msgid "Repeat Password"
+msgstr "Repetir Contraseña"
+
+#: app/forms.py:20 app/routes.py:103 app/templates/register.html:3
+msgid "Register"
+msgstr "Registrarse"
+
+#: app/forms.py:30
+msgid "User name already taken."
+msgstr "Por favor use un nombre de usuario diferente."
+
+#: app/forms.py:35
+msgid "Email is already in use"
+msgstr "Por favor use una dirección de email diferente."
+
+#: app/forms.py:40
+msgid "About me"
+msgstr "Acerca de mí"
+
+#: app/forms.py:41 app/forms.py:56 app/forms.py:60
+msgid "Submit"
+msgstr "Enviar"
+
+#: app/forms.py:53
+msgid "Please use a different username"
+msgstr "or favor use un nombre de usuario diferente."
+
+#: app/forms.py:59
+msgid "Say something"
+msgstr "Dí algo"
+
+#: app/forms.py:64 app/forms.py:70
+msgid "Request Password Reset"
+msgstr "Pedir una nueva contraseña"
+
+#: app/routes.py:31
+msgid "Your post is now live!"
+msgstr "¡Tu artículo ha sido publicado!"
+
+#: app/routes.py:50 app/templates/base.html:25
+msgid "Home"
+msgstr "Inicio"
+
+#: app/routes.py:65
+msgid "Invalid username or password"
+msgstr "Nombre de usuario o contraseña inválidos"
+
+#: app/routes.py:100
+msgid "Congratulations, you are now a registered user!"
+msgstr "¡Felicitaciones, ya eres un usuario registrado!"
+
+#: app/routes.py:146
+msgid "Your changes have been saved"
+msgstr "Tus cambios han sido salvados."
+
+#: app/routes.py:161 app/routes.py:180
+#, python-format
+msgid "User %(username)s not found."
+msgstr "El usuario %(username)s no ha sido encontrado."
+
+#: app/routes.py:164
+msgid "You cannot follow yourself!"
+msgstr "¡No te puedes seguir a tí mismo!"
+
+#: app/routes.py:168
+#, python-format
+msgid "You are following %(username)s!"
+msgstr "¡Ahora estás siguiendo a %(username)s!"
+
+#: app/routes.py:183
+msgid "You cannot un-follow yourself!"
+msgstr "¡No te puedes dejar de seguir a tí mismo!"
+
+#: app/routes.py:187
+#, python-format
+msgid "You are not following %(username)s."
+msgstr "No estás siguiendo a %(username)s."
+
+#: app/routes.py:201 app/templates/base.html:26
+msgid "Explore"
+msgstr "Explorar"
+
+#: app/routes.py:214
+msgid "Check your email for the instructions to reset your password"
+msgstr "Busca en tu email las instrucciones para crear una nueva contraseña"
+
+#: app/routes.py:217 app/templates/reset_password_request.html:3
+msgid "Reset Password"
+msgstr "Nueva Contraseña"
+
+#: app/routes.py:232
+msgid "Your password has been reset."
+msgstr "Tu contraseña ha sido cambiada."
+
+#: app/translate.py:11
+msgid "Error: the translation service is not configured."
+msgstr ""
+
+#: app/translate.py:22
+msgid "Error: the translation service failed."
+msgstr ""
+
+#: app/templates/404.html:2
+msgid "Not Found"
+msgstr "Página No Encontrada"
+
+#: app/templates/404.html:3
+msgid "Back"
+msgstr "Atrás"
+
+#: app/templates/_post.html:13
+#, python-format
+msgid "%(username)s said %(when)s"
+msgstr "%(username)s dijo %(when)s"
+
+#: app/templates/_post.html:27
+msgid "Translate"
+msgstr ""
+
+#: app/templates/base.html:2
+msgid "Welcome to Larkin Coffee shop"
+msgstr "Bienvenido a Larkin Coffee shop"
+
+#: app/templates/base.html:30
+msgid "Login"
+msgstr "Ingresar"
+
+#: app/templates/base.html:34
+msgid "Profile"
+msgstr "Perfil"
+
+#: app/templates/base.html:37
+msgid "Logout"
+msgstr "Salir"
+
+#: app/templates/base.html:79
+msgid "Error: Could not contact server."
+msgstr ""
+
+#: app/templates/edit_profile.html:3
+msgid "Edit Profile"
+msgstr "Editar Perfil"
+
+#: app/templates/index.html:3
+#, python-format
+msgid "Hello, %(username)s!"
+msgstr "Hi, %(username)s!"
+
+#: app/templates/index.html:14 app/templates/user.html:41
+msgid "Newer posts"
+msgstr "Artículos siguientes"
+
+#: app/templates/index.html:19 app/templates/user.html:46
+msgid "Older posts"
+msgstr "Artículos previos"
+
+#: app/templates/login.html:8
+msgid "New User?"
+msgstr "¿Usuario Nuevo?"
+
+#: app/templates/login.html:8
+msgid "Click to Register"
+msgstr "¡Haz click aquí para registrarte!"
+
+#: app/templates/login.html:10
+msgid "Forgot Your Password?"
+msgstr "¿Te olvidaste tu contraseña?"
+
+#: app/templates/login.html:11
+msgid "Click to Reset It"
+msgstr "Haz click aquí para pedir una nueva"
+
+#: app/templates/reset_password.html:3
+msgid "Reset Your Password"
+msgstr "Nueva Contraseña"
+
+#: app/templates/user.html:8
+msgid "User"
+msgstr "Usuario"
+
+#: app/templates/user.html:13
+msgid "Last seen on"
+msgstr "Última visita"
+
+#: app/templates/user.html:16
+#, python-format
+msgid "%(count)d followers"
+msgstr "%(count)d seguidores"
+
+#: app/templates/user.html:16
+#, python-format
+msgid "%(count)d following"
+msgstr "siguiendo a %(count)d"
+
+#: app/templates/user.html:17
+msgid "Edit your profile"
+msgstr "Editar tu perfil"
+
+#: app/templates/user.html:22
+msgid "Follow"
+msgstr "Seguir"
+
+#: app/templates/user.html:29
+msgid "Unfollow"
+msgstr "Dejar de seguir"
+
